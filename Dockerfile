@@ -1,10 +1,3 @@
-# Author:  George Hall
-# License: CC BY-NC 4.0 — non-commercial use only
-
-# Stage 1: builder
-# Install dependencies in isolation so they
-# don't bloat the final image.
-
 FROM python:3.11-slim AS builder
 
 WORKDIR /build
@@ -15,7 +8,6 @@ RUN pip install --upgrade pip \
     && pip install --no-cache-dir --prefix=/install -r requirements.txt
 
 
-# Stage 2: runtime
 # Lean final image — only what's needed to run.
 
 FROM python:3.11-slim AS runtime

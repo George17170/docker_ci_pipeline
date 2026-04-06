@@ -1,6 +1,3 @@
-# Author:  George Hall
-# License: CC BY-NC 4.0 — non-commercial use only
-
 import os
 import platform
 from datetime import datetime, timezone
